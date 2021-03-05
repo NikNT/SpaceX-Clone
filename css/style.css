@@ -78,3 +78,94 @@ header nav .navRight .search > div input{
     font-size: 16px; 
     color: var(--pure); 
 }    
+
+.social div{
+    border: 2px solid var(--pure);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    opacity: 0;
+}
+
+@keyframes moveIn{
+    from{
+        transform: translateX(-100px);
+    }
+
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.fa{
+    color: var(--pure);  
+}
+
+.social div:hover .fa{
+    color: var(--dark); 
+    transition: all 0.3s ease-in-out;
+}
+
+.social div:hover{
+    background: var(--pure);
+}
+
+.hero{
+    position: relative; 
+}
+
+.social{
+    position: absolute;
+    left: 0;
+    top: 0; 
+    border-right: 1px solid var(--gray);
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 90vh;
+}
+
+
+.hero .cta{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: calc(100vh - 80px);
+}
+
+.hero .cta h1{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.hero .cta > div {
+    flex: 1;
+}
+
+.hero .cta .leftSection{
+    padding: 0 60px 0 30px;
+}
+
+.hero .cta .rightSection{
+    height: 70vh;
+    transform: rotate(20deg);
+    animation: moveInSpace 12s ease-in-out infinite alternate;
+}
+
+@keyframes moveInSpace {
+
+    50%{
+        transform: translateY(100px) rotate(-70deg) scale(0.7);
+    }
+
+
+}
